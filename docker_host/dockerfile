@@ -4,4 +4,5 @@ RUN apt update -y
 RUN apt install nginx unzip -y
 WORKDIR var/www/html
 COPY oxer.zip .
-RUN unzip oxer
+RUN unzip oxer.zip
+
