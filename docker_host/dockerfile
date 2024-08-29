@@ -3,4 +3,5 @@ LABEL image="frontendstatic"
 RUN apt update -y
 RUN apt install nginx unzip -y
 WORKDIR var/www/html
-COPY oxer
+COPY oxer.zip .
+RUN 
