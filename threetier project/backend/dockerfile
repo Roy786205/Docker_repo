@@ -1,1 +1,2 @@
-fro
+FROM ubuntu:latest
+lab
