@@ -1,3 +1,4 @@
 FROM ubuntu:latest
 LABEL purpose="backend"
-RUN apt update &&
+RUN apt update && \
+apr
