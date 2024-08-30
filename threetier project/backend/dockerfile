@@ -1,2 +1,3 @@
 FROM ubuntu:latest
-LABEL purpose="value"
+LABEL purpose="backend"
+RUN command
