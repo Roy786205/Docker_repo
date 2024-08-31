@@ -9,4 +9,5 @@ COPY init-db.sql /docker-entrypoint-initdb.d/
 #expose the mysql port
 EXPOSE 3306
 
-#
+#start the mysql server
+CMD [ "mysql" ]
