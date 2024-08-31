@@ -4,4 +4,4 @@ FROM mysql:latest
 ENV MYSQL_ROOT_PASSWORD=Redhate123
 
 #create database and table upon container
-COPY init-db.sql /docker-entr
+COPY init-db.sql /docker-entrypoint-init
