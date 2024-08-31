@@ -1,4 +1,6 @@
 FROM mysql:latest
 
 #set root mysql password
-ENV key=value
+ENV MYSQL_ROOT_PASSWORD=Redhate123
+
+#
