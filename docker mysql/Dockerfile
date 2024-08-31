@@ -1,7 +1,7 @@
 # cat Dockerfile
 FROM mysql:latest
 
-LABEL key="value" baeldung.com
+MAINTAINER name baeldung.com
 
 RUN chown -R mysql:root /var/lib/mysql/
 
