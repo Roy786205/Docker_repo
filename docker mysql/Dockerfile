@@ -7,4 +7,6 @@ ENV MYSQL_ROOT_PASSWORD=Redhate123
 COPY init-db.sql /docker-entrypoint-initdb.d/
 
 #expose the mysql port
-e
+EXPOSE 3306
+
+#
