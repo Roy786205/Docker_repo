@@ -4,4 +4,4 @@ FROM mysql:latest
 ENV MYSQL_ROOT_PASSWORD=Redhate123
 
 #create database and table upon container
-c
+COPY init-db.sql dest
