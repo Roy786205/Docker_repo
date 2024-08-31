@@ -5,8 +5,8 @@ MAINTAINER baeldung.com
 
 RUN chown -R mysql:root /var/lib/mysql/
 
-ARG 
-ARG MYSQL_USER
+ARG studentapp
+ARG student
 ARG MYSQL_PASSWORD
 ARG MYSQL_ROOT_PASSWORD
 
