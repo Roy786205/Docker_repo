@@ -17,7 +17,7 @@ ENV MYSQL_ROOT_PASSWORD=$Redhate123
 
 COPY student.sql /etc/mysql/student.sql
 
-RUN sed -i 's/MYSQL_DATABASE/'$MYSQL_DATABASE'/g' /etc/mysql/student.sql
+RUN sed -i 's/st/'$MYSQL_DATABASE'/g' /etc/mysql/student.sql
 RUN cp /etc/mysql/student.sql /docker-entrypoint-initdb.d
 
 EXPOSE 3306
