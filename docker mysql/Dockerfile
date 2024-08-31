@@ -8,7 +8,7 @@ RUN chown -R mysql:root /var/lib/mysql/
 ARG studentapp
 ARG student
 ARG Redhate123
-ARG REd
+ARG Redhate123
 
 ENV MYSQL_DATABASE=$MYSQL_DATABASE
 ENV MYSQL_USER=$MYSQL_USER
