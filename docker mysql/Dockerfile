@@ -1,3 +1,4 @@
 FROM mysql:latest
 
-#set root pad
+#set root mysql password
+ENV key=value
