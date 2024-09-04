@@ -9,15 +9,15 @@ RUN apt-get update && \
     apt-get install -y apache2 unzip && \
     rm -rf /var/www/html/index.html
 
-# Copy the zip file to the container
-COPY "number addition.zip" /var/www/html/
+# Copy the renamed zip file to the container
+COPY number_addition.zip /var/www/html/
 
 # Set the working directory
 WORKDIR /var/www/html
 
 # Unzip the source code
-RUN unzip "number addition.zip" && \
-    rm "number addition.zip"  # Optional: Remove zip file after extraction
+RUN unzip number_addition.zip && \
+    rm number_addition.zip  # Optional: Remove zip file after extraction
 
 # Expose port 80
 EXPOSE 80
