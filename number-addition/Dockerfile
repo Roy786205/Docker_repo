@@ -1,18 +1,27 @@
-#we are placing a base for our docker image
+# Use the latest Ubuntu image as the base
 FROM ubuntu:latest
-#we are labeling our docker image here
+
+# Label the Docker image
 LABEL image="frontendstatic"
-#we are running few commands in our container(during container creation)
-RUN apt update 
-RUN apt install apache2 unzip -y
-RUN rm -rf /var/www/html/index.html
-#we are copying source code from local storage
-COPY number addition.zip /var/www/html/number addition.zip
-#we are moving to /var/www/html
+
+# Update package lists, install Apache2 and unzip, and remove default index.html
+RUN apt-get update && \
+    apt-get install -y apache2 unzip && \
+    rm -rf /var/www/html/index.html
+
+# Copy the zip file to the container
+COPY "number addition.zip" /var/www/html/
+
+
+# Set the working directory
 WORKDIR /var/www/html
-#we are unzipping and extracting the source code in default deployment enviornment location
-RUN unzip number addition.zip
-#we are exposing our container to a port
+
+# Unzip the source code
+RUN unzip "number addition.zip" && \
+    rm "number addition.zip"  # Optional: Remove zip file after extraction
+
+# Expose port 80
 EXPOSE 80
-#we are providing container a processs 
-CMD ["apachectl", "-D" ,"FOREGROUND"]
+
+# Start Apache in the foreground
+CMD ["apachectl", "-D", "FOREGROUND"]
