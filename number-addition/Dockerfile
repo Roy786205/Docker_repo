@@ -10,8 +10,7 @@ RUN apt-get update && \
     rm -rf /var/www/html/index.html
 
 # Copy the zip file to the container
-COPY "number addition.zip" /var/www/html/ 
-
+COPY "number addition.zip" "/var/www/html/number addition.zip"
 
 # Set the working directory
 WORKDIR /var/www/html
